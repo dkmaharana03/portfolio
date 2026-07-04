@@ -1,9 +1,9 @@
 import { useState } from "react";
 import msccertificate from "../assets/certificates/Dhruv_Kumar_Maharana_Training Certificate.pdf";
-import deloittecertificate from "../assets/certificates/Deloitte Ceritificate.pdf";
-import ibmcertificate from "../assets/certificates/IBM Certificate.pdf";
-import jspidercertificate from "../assets/Certificates/JSpider Certificate.pdf";
-import hackathoncertificate from "../assets/Certificates/NexTech_1.O.pdf"
+import deloittecertificate from "../assets/certificates/deloitte-certificate.pdf";
+import ibmcertificate from "../assets/certificates/ibm-certificate.pdf";
+import jspidercertificate from "../assets/certificates/JSpider Certificate.pdf";
+import hackathoncertificate from "../assets/certificates/NexTech_1.O.pdf"
 
 function Certificates() {
   const [selectedCert, setSelectedCert] = useState(null);
