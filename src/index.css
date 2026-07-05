@@ -222,9 +222,9 @@ body::before {
 }
 
 .tech-stack svg {
-  font-size: 34px;
-  padding: 10px;
-  border-radius: 12px;
+  font-size: 75px;
+  padding: 18px;
+  border-radius: 16px;
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(56, 189, 248, 0.25);
   transition: 0.3s ease;
