@@ -1,3 +1,18 @@
+/*Global Variable*/
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /*Body section*/
 body {
   margin: 0;
@@ -239,10 +254,9 @@ body::before {
 }
 
 .profile-img {
-  width: 600px;
+  width: 100%;
   height: 500px;
-  margin-right: 200px;
-  margin-bottom: 250px;
+  max-width: 500px;
   object-fit: contain;
   position: relative;
   z-index: 2;
@@ -267,26 +281,58 @@ body::before {
   transform: scale(1.4) translateY(-8px);
 }
 
-/* Mobile responsive */
 @media (max-width: 768px) {
   .hero {
     flex-direction: column-reverse;
     text-align: center;
-    gap: 50px;
-    padding: 50px 30px;
+    padding: 80px 20px;
+    gap: 40px;
+  }
+
+  .hero-content {
+    max-width: 100%;
   }
 
   .hero h1 {
-    font-size: 50px;
+    font-size: 42px;
+    line-height: 1.2;
   }
 
   .hero h2 {
     font-size: 28px;
   }
 
-  .image-circle {
+  .hero p {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+
+  .tech-stack {
+    justify-content: center;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .coverletter-btn {
+    margin-left: 0;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .profile-img {
     width: 280px;
-    height: 280px;
+    height: auto;
+    margin: 0 auto;
+    transform: none !important;
   }
 }
 
@@ -370,6 +416,23 @@ html {
 
 .about-card li {
   margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+    padding: 80px 20px;
+    gap: 40px;
+  }
+
+  .about-right {
+    margin-top: 0;
+    grid-template-columns: 1fr;
+  }
+
+  .about h2 {
+    font-size: 34px;
+  }
 }
 
 /*Education section*/
@@ -571,14 +634,12 @@ html {
   text-decoration: underline;
 }
 
-/* Grid Layout */
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 30px;
 }
 
-/* Project Card */
 .project-card {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -593,14 +654,12 @@ html {
   box-shadow: 0 12px 30px rgba(56, 189, 248, 0.18);
 }
 
-/* Project Image */
 .project-image img {
   width: 100%;
   height: 220px;
   object-fit: cover;
 }
 
-/* Project Content */
 .project-content {
   padding: 25px;
 }
@@ -616,7 +675,6 @@ html {
   color: #cbd5e1;
 }
 
-/* Tech Stack */
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
@@ -634,18 +692,21 @@ html {
   font-weight: 500;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .projects {
     padding: 80px 20px;
   }
 
-  .projects h2 {
-    font-size: 34px;
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    width: 100%;
   }
 
   .project-image img {
-    height: 200px;
+    height: auto;
   }
 }
 
@@ -958,10 +1019,9 @@ html {
   box-shadow: 0 10px 30px rgba(37, 99, 235, 0.35);
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .contact-heading {
-    text-align: center;
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 80px 20px;
   }
 
   .contact-wrapper {
@@ -969,61 +1029,9 @@ html {
     gap: 40px;
   }
 
-  .contact-left {
-    text-align: center;
-  }
-
-  .contact-text {
-    max-width: 100%;
-  }
-
-  .contact-info-box {
-    justify-content: center;
-  }
-
-  .contact-form {
-    max-width: 100%;
-    padding: 30px;
-  }
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .contact-wrapper {
-    flex-direction: column;
-    gap: 40px;
-  }
-
-  .contact-heading {
-    text-align: center;
-  }
-
-  .contact-left {
-    text-align: center;
-  }
-
-  .contact-text {
-    max-width: 100%;
-  }
-
-  .contact-info-box {
-    justify-content: center;
-  }
-}
-
-/* Mobile Responsive */
-@media (max-width: 900px) {
-  .contact-wrapper {
-    flex-direction: column;
-    gap: 50px;
-  }
-
-  .contact-text {
-    text-align: center;
-    max-width: 100%;
-  }
-
-  .contact-left {
+  .contact-left,
+  .contact-right {
+    width: 100%;
     text-align: center;
   }
 
@@ -1032,7 +1040,22 @@ html {
   }
 
   .contact-form {
-    padding: 30px;
+    padding: 25px;
+    max-width: 100%;
+  }
+
+  .contact-form label {
+    font-size: 18px;
+    text-align: left;
+  }
+
+  .contact-heading h2 {
+    font-size: 34px;
+    text-align: center;
+  }
+
+  .contact-heading p {
+    text-align: center;
   }
 }
 
@@ -1133,19 +1156,23 @@ html {
   color: #94a3b8;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 20px;
+  }
+
   .footer-top {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 30px;
   }
 
   .footer-links {
-    justify-content: center;
+    grid-template-columns: 1fr;
   }
 
-  .footer-socials {
-    align-items: center;
+  .footer-links h4 {
+    grid-column: span 1;
   }
 }
 
