@@ -3,11 +3,6 @@
   box-sizing: border-box;
 }
 
-html,
-body {
-  overflow-x: hidden;
-}
-
 img {
   max-width: 100%;
   height: auto;
@@ -19,7 +14,6 @@ body {
   padding: 0;
   color: white;
   font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
   background: linear-gradient(
   135deg,
   #020617,
@@ -67,18 +61,17 @@ body::before {
 /*Navbar section*/
 .navbar {
   position: sticky;
-  top: 20px;
-  margin: 20px auto;
+  top: 10px;
+  margin: 0 auto;
   width: 92%;
   z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 50px;
-  border-radius: 70px;
-  background: transparent;
+  padding: 15px 50px;
+  border-radius: 30px 30px 30px 30px;
+  background: rgba(15, 23, 42, 0.7);
   backdrop-filter: blur(14px);
-
   border: 1px solid rgb(3, 179, 255);
 }
 
