@@ -74,7 +74,7 @@ function About() {
         <div className="about-card">
           <h3>Key Interests</h3>
           <ul>
-            <li>Plays Chess</li>
+            <li>Play Chess</li>
             <li>Indulge in Physical Activities</li>
             <li>Participates in Social Activities</li>
           </ul>

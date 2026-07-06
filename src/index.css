@@ -931,6 +931,36 @@ html {
   cursor: pointer;
 }
 
+@media (max-width: 768px) {
+
+  .certificates-container {
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  .certificate-card {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto 24px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .certificate-card h3 {
+    font-size: 1.35rem;
+    line-height: 1.35;
+  }
+
+  .certificate-card p {
+    font-size: 0.95rem;
+  }
+
+  .certificate-card .btn {
+    width: fit-content;
+    padding: 10px 18px;
+  }
+}
+
 /*Contact section*/
 .contact-heading {
   text-align: left;
